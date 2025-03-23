@@ -1,0 +1,65 @@
++-------------------+         +-------------------+         +-------------------+
+|   Validador       |         |  SistemaLaboratorio |        |   Experimento     |
++-------------------+         +-------------------+         +-------------------+
+| validar_texto()   |         | reactivos         |<>-------->| receta           |
+| validar_numero_   |         | recetas           |         | fecha            |
+| positivo()        |         | experimentos      |         | responsables     |
+| validar_formato_  |         | proveedores       |         | resultados       |
+| fecha()           |         +-------------------+         | validaciones_    |
++-------------------+         | añadir_reactivo() |         | mediciones       |
+         ^                    | añadir_receta()   |         | exito            |
+         |                    | realizar_         |         | costo            |
+         |                    | experimento()     |         | notas            |
+         |                    | añadir_proveedor()|         +-------------------+
+         |                    | asociar_          |         | registrar_       |
+         |                    | proveedor_con_    |         | resultado()      |
+         |                    | reactivo()        |         | validar_         |
+         |                    | realizar_pedido() |         | resultados()     |
+         |                    | recibir_pedido()  |         | a_diccionario()  |
+         |                    | obtener_reactivos_|         | desde_           |
+         |                    | bajo_stock()      |         | diccionario()    |
+         |                    | obtener_reactivos_|         +-------------------+
+         |                    | vencidos()        |                 ^
+         |                    | generar_informe_  |                 |
+         |                    | inventario()      |                 |
+         |                    | obtener_          |                 |
+         |                    | estadisticas_     |                 |
+         |                    | experimentos()    |                 |
+         |                    | guardar_datos()   |                 |
+         |                    | cargar_datos()    |                 |
+         |                    | inicializar_datos_|                 |
+         |                    | ejemplo()         |                 |
+         |                    +-------------------+                 |
+         |                            ^                            |
+         |                            |                            |
+         |                            |                            |
++-------------------+         +-------------------+         +-------------------+
+|   Reactivo        |<>-------| Receta            |-------->| Funciones Menú    |
++-------------------+         +-------------------+         +-------------------+
+| nombre            |         | nombre            |         | menu_reactivos()  |
+| descripcion       |         | objetivo          |         | menu_recetas()    |
+| costo             |         | reactivos         |         | menu_experimentos()|
+| categoria         |         | resultados_       |         | menu_proveedores()|
+| inventario        |         | esperados         |         | añadir_reactivo() |
+| unidad            |         | procedimiento     |         | ver_reactivos()   |
+| umbral_minimo     |         +-------------------+         | actualizar_       |
+| fecha_vencimiento |         | validar_reactivos()|        | inventario()      |
+| ubicacion         |         | calcular_costo_   |         | ver_bajo_stock()  |
+| info_seguridad    |         | total()           |         | ver_vencidos()    |
+| historial_compras |         | a_diccionario()   |         | ver_proveedores() |
+| historial_uso     |         | desde_            |         | asociar_proveedor()|
+| pedidos           |         | diccionario()     |         | añadir_proveedor()|
++-------------------+         +-------------------+         | realizar_pedido() |
+| esta_bajo_stock() |                                      | recibir_pedido()  |
+| esta_vencido()    |                                      | informe_          |
+| dias_hasta_       |                                      | inventario()      |
+| vencimiento()     |                                      | ver_experimentos()|
+| actualizar_       |                                      | estadisticas_     |
+| inventario()      |                                      | experimento()     |
+| obtener_info_     |                                      | validar_receta()  |
+| seguridad()       |                                      | añadir_receta()   |
+| a_diccionario()   |                                      | ver_recetas()     |
+| desde_            |                                      | realizar_         |
+| diccionario()     |                                      | experimento()     |
++-------------------+                                      | principal()       |
+                                                          +-------------------+
